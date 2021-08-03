@@ -20,7 +20,11 @@ int main() {
     cin >> n;
     vector<ll> arr(n);
     for(ll &i: arr) i = rand()%50 + 1;
+    cout << "Before Bubble:" << endl;
+    for(ll i : arr)
+        cout << i << " ";
     BubbleGum(arr, n);
+    cout << "After Bubble:" << endl;
     for(ll i : arr)
         cout << i << " ";
     return 0;
