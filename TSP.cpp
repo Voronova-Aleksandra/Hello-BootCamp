@@ -12,6 +12,12 @@ void gen_trip(vector<vector<ll>> &cost, ll n){
             cost[j][i] = cost[i][j];
         }
     }
+    /*cost = {{0, 0, 0, 0, 0, 0},
+            {0, 0, 3, 13, 9, 7},
+            {0, 3, 0, 6, 12, 10},
+            {0, 13, 6, 0, 9, 6},
+            {0, 9, 12, 9, 0, 8},
+            {0, 7, 10, 6, 8, 0}};*/
     for(vector<ll> i: cost){
         for(ll j : i)
             cout << j << " ";
@@ -35,6 +41,7 @@ int main() {
             ll to = path[(i+1) % n];
             c += cost[from][to];
         }
+        cout << c << endl;
         if(c < min_c){
             min_c = c;
             res = path;
